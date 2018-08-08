@@ -1,0 +1,31 @@
+{
+  "name": "registro-de-visitas",
+  "version": "1.0.0",
+  "description": "Quinto proyecto de laboratoria cdmx",
+  "main": "index.js",
+  "scripts": {
+    "htmlhint": "htmlhint src/*.html test/*.html",
+    "eslint": "eslint --ext .js src/ test/",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "test-browser": "opener ./test/index.html",
+    "test-node": "nyc mocha ./test/headless.js && nyc report --reporter=html",
+    "test": "npm run test-node && npm run test-browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianaCarrillo/cdmx-2018-06-am-bc-registro-de-visitantes.git"
+  },
+  "author": "Diana Esmeralda, Lex Hernández, Diana Carrillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DianaCarrillo/cdmx-2018-06-am-bc-registro-de-visitantes/issues"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "htmlhint": "^0.9.13",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "opener": "^1.4.3"
+  }
+}
