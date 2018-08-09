@@ -12,29 +12,33 @@
 </head>
 
 <body>
-  <form>
-    <div class="container center">
+  <form id="form-admin">
+    <div class="container ">
       <div class="row">
-        <div class="input-field col s12 l12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-
-        <div class="input-field col s12 l12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+        <div class="input-field col s10 m10 l10">
+          <input id="email-admin" type="email" class="validate" placeholder="E-mail">
         </div>
       </div>
+      <div class="row">
+        <div class="input-field col s10 m10 l10">
+          <input id="password-admin" type="password" class="validate" placeholder="password">
+          <!-- <label for="password-admin">Password</label> -->
+        </div>
+      </div>
+
 
       <div class="row ">
-        <div class=" btn light-green col s6 m6 l6">
-          <a id="log-in-btn">Iniciar sesión</a>
+        <div class="col s6 m6 l6">
+          <button type= "button" id="log-in-btn-admin">Iniciar sesión</button>
         </div>
       </div>
+    </div>
   </form>
 
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   <script src="../js/initialize.js"></script>
+  <script src="../js/signIn.js">
+  </script>
 </body>
 
 </html>
