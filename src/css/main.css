@@ -1,0 +1,43 @@
+.bienvenida{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 300%;
+}
+
+.logo{
+    font-size:300%;
+}
+
+
+#sign-in-href{
+    font-size: 150%;
+ text-align: right;
+}
+
+.visitor-label{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 200%;
+    margin-top:10%;
+    margin-bottom: 0%;
+    font-weight: bold;
+    text-align: center;
+}
+.visitor-label-english{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 150%;
+    margin-top: 0%;
+    text-align: center;
+
+}
+
+#fullname-span, #email-span, #company-span {
+    font-size: 100%; 
+}
+
+.formcontent{
+margin-left:15%;
+}
+
+form{
+    margin-top:10%;
+}
+
