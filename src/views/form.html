@@ -13,61 +13,65 @@
 </head>
 
 <body>
-    <div class="container">
-  <header>
+  <div class="container">
+    <header>
       <div class="row">
         <p class="visitor-label">Información del visitante</p>
         <p class="visitor-label-english">Visitor Information</p>
-  </header>
+    </header>
 
-  <form class="col s12 m12 l12">
-    <div class="formcontent">
-      <div class="row">
-        <div class="input-field col s10 m10 l10">
-          <input id="complete-name" type="text">
-          <span id="fullname-span" class="helper-text" data-error="wrong" data-success="right">Nombre completo / Full Name</span>
+    <form class="col s12 m12 l12">
+      <div class="formcontent">
+        <div class="row">
+          <div class="input-field col s5 m5 l5">
+            <input id="name" type="text">
+            <span id="name-span" class="helper-text" data-error="wrong" data-success="right">Nombre</span>
+          </div>
+          <div class="input-field col s5 m5 l5">
+            <input id="name" type="text">
+            <span id="lastname-span" class="helper-text" data-error="wrong" data-success="right">Apellido</span>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s10 m10 l10">
-          <input id="email" type="email" class="validate">
-          <span id="email-span" class="helper-text">Correo / e-mail </span>
+        <div class="row">
+          <div class="input-field col s10 m10 l10">
+            <input id="email" type="email" class="validate">
+            <span id="email-span" class="helper-text">Correo / e-mail </span>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s10 m10 l10">
-          <input id="company" type="text">
-          <span id="company-span" class="helper-text" data-error="wrong" data-success="right">Compañía / Company </span>
+        <div class="row">
+          <div class="input-field col s10 m10 l10">
+            <input id="company" type="text">
+            <span id="company-span" class="helper-text" data-error="wrong" data-success="right">Compañía / Company </span>
+          </div>
         </div>
-      </div>
 
-      <!-- Modal Trigger -->
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Captura tu foto</a>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Captura tu foto</a>
         <div class="row">
           <button type="button" id="send-form-btn">SEND</button>
-      </div>
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal">
-        <div class="modal-content" style="width:300px; height:300px;">
-          <video id="player" controls autoplay></video>
         </div>
-        <div class="modal-footer">
-          <a href="#!" id="capture" class="modal-close waves-effect waves-green btn-flat center-align">Capturar</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content" style="width:300px; height:300px;">
+            <video id="player" controls autoplay></video>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" id="capture" class="modal-close waves-effect waves-green btn-flat center-align">Capturar</a>
+          </div>
         </div>
+        <canvas id="snapshot" width=320 height=240></canvas>
       </div>
-      <canvas id="snapshot" width=320 height=240></canvas>
+
+    </form>
     </div>
 
-  </form>
-  </div>
 
-
-  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="../js/initialize.js"></script>
-  <script src="../js/main.js"></script>
-  <script src="../js/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="../js/initialize.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/jquery.js"></script>
 
 </body>
 
