@@ -12,7 +12,8 @@ sendBtn.addEventListener('click', () => {
     db.collection('visitors').add({
       visitor: completeNameInput.value,
       email: emailInput.value,
-      company: companyInput.value
+      company: companyInput.value,
+      foto: ''
     })
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
@@ -20,3 +21,28 @@ sendBtn.addEventListener('click', () => {
   };
 });
 
+var player = document.getElementById('player'); 
+var snapshotCanvas = document.getElementById('snapshot');
+var captureButton = document.getElementById('capture');
+var videoTracks;
+
+var handleSuccess = function(stream) {
+  // Attach the video stream to the video element and autoplay.
+  player.srcObject = stream;
+  videoTracks = stream.getVideoTracks();
+};
+
+captureButton.addEventListener('click', function() {
+  var context = snapshot.getContext('2d');
+  console.log(context);
+  // Draw the video frame to the canvas.
+  var foto = context.drawImage(player, 0, 0, snapshotCanvas.width, 
+    snapshotCanvas.height);
+  // Stop all video streams.
+  videoTracks.forEach(function(track) {
+    track.stop();
+  });
+});
+
+navigator.mediaDevices.getUserMedia({video: true})
+  .then(handleSuccess);
