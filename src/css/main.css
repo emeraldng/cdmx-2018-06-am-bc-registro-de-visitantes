@@ -1,11 +1,15 @@
 .bienvenida{
     font-family: 'Quicksand', sans-serif;
     font-size: 300%;
-    margin-top: 30%;
 }
 
+.logo{
+    font-size:300%;
+}
+
+
 #sign-in-href{
-    font-size: 200%;
+    font-size: 150%;
  text-align: right;
 }
 
@@ -25,15 +29,15 @@
 
 }
 
+#fullname-span, #email-span, #company-span {
+    font-size: 100%; 
+}
+
 .formcontent{
 margin-left:15%;
 }
 
 form{
     margin-top:10%;
-}
-
-.logo{
-    font-size:300%;
 }
 
