@@ -44,3 +44,14 @@ form{
 #form-admin{
  margin-left:10%;;
 }
+
+video{
+    width: 200%;
+}
+
+/* #capture{
+    align-content: center;
+} */
+#send-form-btn{
+    margin-top:10%;
+}
