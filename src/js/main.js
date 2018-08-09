@@ -13,7 +13,9 @@ sendBtn.addEventListener('click', () => {
       visitor: completeNameInput.value,
       email: emailInput.value,
       company: companyInput.value,
-      foto: ''
+      foto: '',
+      asunto: '',
+      time: ''
     })
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
