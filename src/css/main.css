@@ -1,6 +1,12 @@
 .bienvenida{
     font-family: 'Quicksand', sans-serif;
     font-size: 300%;
+    margin-top: 30%;
+}
+
+#sign-in-href{
+    font-size: 200%;
+ text-align: right;
 }
 
 .visitor-label{
@@ -30,3 +36,4 @@ form{
 .logo{
     font-size:300%;
 }
+

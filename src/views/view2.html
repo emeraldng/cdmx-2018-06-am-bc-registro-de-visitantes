@@ -5,40 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <title>Registro</title>
+  <title>Document</title>
 </head>
 
 <body>
-  <section>
+  <form>
     <div class="container">
       <div class="row">
-        <div class="col l12 m12 s12">
-          <p id="sign-in-href">Sign in</p>
+        <div class="input-field col s12 l12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-field col s12 l12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
         </div>
       </div>
-    </div>
-  </section>
 
-  <main>
-    <div class="container center">
       <div class="row">
-        <div class="col l12 m12 s12">
-          <p class="bienvenida">Bienvenid@</p>
-          <p class="logo">Terminal 1</p>
-          <button id="button-registro" type="button">Iniciar registro</button>
+        <div class=" btn-large light-green col s12 m12 l12">
+          <a id="log-in-btn">Iniciar sesión</a>
         </div>
       </div>
-  </main>
+  </form>
 
-  </div>
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
-  <script src="js/app.js"></script>
+  <script src="../js/initialize.js"></script>
+  <script src="../js/app.js"></script>
 </body>
 
 </html>
