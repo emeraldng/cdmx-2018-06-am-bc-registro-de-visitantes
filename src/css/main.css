@@ -21,6 +21,14 @@
     font-weight: bold;
     text-align: center;
 }
+.admin-label{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 200%;
+    margin-top:10%;
+    /* margin-bottom: 0%; */
+    font-weight: bold;
+    text-align: center;
+}
 .visitor-label-english{
     font-family: 'Quicksand', sans-serif;
     font-size: 150%;
@@ -41,9 +49,6 @@ form{
     margin-top:10%;
 }
 
-#form-admin{
- margin-left:10%;;
-}
 
 video{
     width: 160%;
