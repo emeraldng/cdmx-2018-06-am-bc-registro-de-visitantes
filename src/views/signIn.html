@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="form-admin">
+    <div class="container ">
+      <div class="row">
+        <div class="input-field col s10 m10 l10">
+          <input id="email-admin" type="email" class="validate" placeholder="E-mail">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s10 m10 l10">
+          <input id="password-admin" type="password" class="validate" placeholder="password">
+          <!-- <label for="password-admin">Password</label> -->
+        </div>
+      </div>
+
+
+      <div class="row ">
+        <div class="col s6 m6 l6">
+          <button type= "button" id="log-in-btn-admin">Iniciar sesión</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="../js/initialize.js"></script>
+  <script src="../js/signIn.js">
+  </script>
+</body>
+
+</html>
