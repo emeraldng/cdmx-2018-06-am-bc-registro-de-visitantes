@@ -46,12 +46,19 @@ form{
 }
 
 video{
-    width: 200%;
+    width: 160%;
 }
 
 /* #capture{
     align-content: center;
 } */
 #send-form-btn{
+    margin-top:10%;
+}
+
+#instruccion-foto{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    font-weight: bold;
     margin-top:10%;
 }

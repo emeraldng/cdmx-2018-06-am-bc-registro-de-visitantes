@@ -1,11 +1,9 @@
 let db = firebase.firestore(); // Variable que inicializa Firestore
 let storage = firebase.storage();
 let blobURL = '';
-let nameInput = document.getElementById('name');
-let lastnameInput = document.getElementById('lastname');
-let emailInput = document.getElementById('email');
-let companyInput = document.getElementById('company');
+
 let sendBtn = document.getElementById('send-form-btn');
+let cardDelVisitante = document.getElementById('card-del-visitante');
 
 // captura de canvas
 let player = document.getElementById('player');
@@ -14,22 +12,53 @@ let captureButton = document.getElementById('capture');
 let videoTracks;
 
 sendBtn.addEventListener('click', () => {
-  if (companyInput.value === '' || emailInput.value === ' ' || companyInput.value === '') {
+  let completeNameValue = document.getElementById('fullname').value;
+  let emailValue = document.getElementById('email').value;
+  let companyValue = document.getElementById('company').value;
+  let dateTime = firebase.firestore.FieldValue.serverTimestamp();
+  if (companyValue === '' || emailValue === ' ' || completeNameValue === '') {
     alert('Es necesario llenar todos los campos');
   } else {
     db.collection('visitors').add({
-      name: nameInput.value,
-      lastname: lastnameInput.value,
-      email: emailInput.value,
-      company: companyInput.value,
+      visitor: completeNameValue,
+      email: emailValue,
+      company: companyValue,
       foto: '',
+      fecha: dateTime
       // blob: bloburl
     })
       .then(docRef => {
         console.log('Document written with ID: ', docRef.id);
       });
   };
+  // pintarRegistrados();
 });
+
+// pintarRegistrados = () =>{
+//   db.collection('visitors').onSnapshot((querySnapshot) => {
+//   // carddelvisitante.innerHTML = '';
+//     querySnapshot.forEach((doc) => {
+//       cardDelVisitante.innerHTML += `<div class="row">
+//                                     <div class="col s12 m7">
+//                                       <div class="card">
+//                                      <div class="card-image">
+//                                      <img src="https://theme.express/minutes/images/quote/2.jpg">
+//                                      <span class="card-title">${doc.data().visitor}</span>
+//                                       </div>
+//                                       <div class="card-content">
+//                                       <p>${doc.data().fecha}</p>
+//                                       <p>${doc.data().company}</p>
+//                                       <p>${doc.data().asunto}</p>
+//                                      </div>
+//                                       <div class="card-action">
+//                                       <a href="#">This is a link</a>
+//                                       </div>
+//                                       </div>
+//                                       </div>
+//                                       </div>`;
+//     });
+//   });
+// };
 
 let handleSuccess = stream => {
   // Attach the video stream to the video element and autoplay.
