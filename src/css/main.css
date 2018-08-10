@@ -89,3 +89,13 @@ video{
     height: 50px;
 }
 
+th{
+    text-align: center;
+}
+
+.td-name, .td-company {
+    text-align: center;
+}
+.td-email{
+    text-align: left;
+}

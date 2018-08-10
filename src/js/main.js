@@ -3,7 +3,6 @@ let storage = firebase.storage();
 let blobURL = '';
 
 let sendBtn = document.getElementById('send-form-btn');
-let cardDelVisitante = document.getElementById('card-del-visitante');
 
 // captura de canvas
 let player = document.getElementById('player');
@@ -29,42 +28,14 @@ sendBtn.addEventListener('click', () => {
     })
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
-        alert('¡Gracias!')
+        alert('¡Gracias!');
         window.location.assign('../index.html');
       })
       .catch(function(error) {
         console.error('Error adding document: ', error);
       });
   };
-  // pintarRegistrados();
 });
-
-// funcion para pintar los registros de los visitantes
-
-// db.collection('visitors').onSnapshot((querySnapshot) => {
-//   // carddelvisitante.innerHTML = '';
-//   querySnapshot.forEach((doc) => {
-//     carddelvisitante.innerHTML += `<div class="row">
-//                                         <div class="col s12 m7">
-//                                           <div class="card">
-//                                          <div class="card-image">
-//                                          <img src="https://theme.express/minutes/images/quote/2.jpg">
-//                                          <span class="card-title">${doc.data().visitor}</span>
-//                                           </div>
-//                                           <div class="card-content">
-//                                           <p>${doc.data().fecha}</p>
-//                                           <p>${doc.data().company}</p>
-//                                           <p>${doc.data().asunto}</p>
-//                                          </div>
-//                                           <div class="card-action">
-//                                           <a href="#">This is a link</a>
-//                                           </div>
-//                                           </div>
-//                                           </div>
-//                                           </div>`;
-//   });
-// });
-
 
 const handleSuccess = function(stream) {
   // Attach the video stream to the video element and autoplay.
