@@ -29,6 +29,14 @@
     font-weight: bold;
     text-align: center;
 }
+.registro-label{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 200%;
+    margin-top:10%;
+    /* margin-bottom: 0%; */
+    font-weight: bold;
+    text-align: center;
+}
 .visitor-label-english{
     font-family: 'Quicksand', sans-serif;
     font-size: 150%;
