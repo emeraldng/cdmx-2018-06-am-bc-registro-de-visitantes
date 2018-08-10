@@ -4,14 +4,13 @@ console.log("hola");
 
 let db = firebase.firestore(); // Variable que inicializa Firestore
 
-// let completeNameInput = document.getElementById('complete-name');
-// let emailInput = document.getElementById('email');
-// let companyInput = document.getElementById('company');
-// let asuntoInput = document.getElementById('asunto');
+let completeNameInput = document.getElementById('complete-name');
+let emailInput = document.getElementById('email');
+let companyInput = document.getElementById('company');
+let asuntoInput = document.getElementById('asunto');
+let carddelvisitante = document.getElementById('carddelvisitante')
 
-// let sendBtn = document.getElementById('send-form-btn');
-
-
+let sendBtn = document.getElementById('send-form-btn');
 
 sendBtn.addEventListener('click', () => {
     let completeNameValue = document.getElementById('complete-name').value;
@@ -34,6 +33,7 @@ sendBtn.addEventListener('click', () => {
       })
       .then(function (docRef) {
         console.log('Document written with ID: ', docRef.id);
+        window.location.assign('../views/registros.html');
       })
       .catch(function (error) {
         console.error('Error adding document: ', error);
@@ -43,28 +43,29 @@ sendBtn.addEventListener('click', () => {
 
 //funcion para pintar los registros de los visitantes
 
-// db.collection('visitors').onSnapshot((querySnapshot) => {
-//       cardDelVisitante.innerHTML = '';
-//       querySnapshot.forEach((doc) => {
-//           cardDelVisitante.innerHTML += `<div class="row">
-//                                         <div class="col s12 m7">
-//                                           <div class="card">
-//                                          <div class="card-image">
-//                                          <img src="images/sample-1.jpg">
-//                                          <span class="card-title">Card Title</span>
-//                                           </div>
-//                                           <div class="card-content">
-//                                           <p>I am a very simple card. I am good at containing small bits of information.
-//                                          I am convenient because I require little markup to use effectively.</p>
-//                                          </div>
-//                                           <div class="card-action">
-//                                           <a href="#">This is a link</a>
-//                                           </div>
-//                                           </div>
-//                                           </div>
-//                                           </div>`
-//         }
-//       }
+db.collection('visitors').onSnapshot((querySnapshot) => {
+      //carddelvisitante.innerHTML = '';
+      querySnapshot.forEach((doc) => {
+          carddelvisitante.innerHTML += `<div class="row">
+                                        <div class="col s12 m7">
+                                          <div class="card">
+                                         <div class="card-image">
+                                         <img src="https://theme.express/minutes/images/quote/2.jpg">
+                                         <span class="card-title">${doc.data().visitor}</span>
+                                          </div>
+                                          <div class="card-content">
+                                          <p>${doc.data().fecha}</p>
+                                          <p>${doc.data().company}</p>
+                                          <p>${doc.data().asunto}</p>
+                                         </div>
+                                          <div class="card-action">
+                                          <a href="#">This is a link</a>
+                                          </div>
+                                          </div>
+                                          </div>
+                                          </div>`
+        });
+      });
 
 
 
