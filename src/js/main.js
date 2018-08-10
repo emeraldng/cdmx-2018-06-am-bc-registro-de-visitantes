@@ -29,7 +29,8 @@ sendBtn.addEventListener('click', () => {
     })
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
-        // window.location.assign('../views/registros.html');
+        alert('¡Gracias!')
+        window.location.assign('../index.html');
       })
       .catch(function(error) {
         console.error('Error adding document: ', error);
