@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Josefin+Slab|Poiret+One" rel="stylesheet">  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <title>Registro</title>
@@ -40,14 +40,14 @@
         <div class="row">
           <div class="input-field col s10 m10 l10">
             <input id="company" type="text">
-            <span id="company-span" class="helper-text" data-error="wrong" data-success="right">Compañía / Company </span>
+            <span id="company-span" class="helper-text" data-error="wrong" data-success="right">¿A quién visita? / Who are you visiting? </span>
           </div>
         </div>
 
         <!-- Modal Trigger -->
         <div class="row ">
-          <p id="instruccion-foto"> Para completar el registro captura tu foto</p>
-          <i  class="material-icons modal-trigger" href="#modal1"> camera_alt</i>
+          <p id="instruccion-foto">Haga click en la cámara para tomar su foto / Click the camara to take a picture of you</p>
+          <i  class="material-icons modal-trigger" id="camara-icon" href="#modal1"> camera_alt</i>
         </div>
         <div class="row">
           <button type="button" id="send-form-btn">Enviar formulario

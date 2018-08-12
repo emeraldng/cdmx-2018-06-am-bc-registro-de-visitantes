@@ -15,6 +15,10 @@ sendBtn.addEventListener('click', () => {
   let emailValue = document.getElementById('email').value;
   let companyValue = document.getElementById('company').value;
   let dateTime = firebase.firestore.FieldValue.serverTimestamp();
+  // var myJSON = JSON.stringify(obj);
+
+  // console.log(dateTime);
+
   if (companyValue === '' || emailValue === ' ' || completeNameValue === '') {
     alert('Es necesario llenar todos los campos');
   } else {
@@ -28,8 +32,8 @@ sendBtn.addEventListener('click', () => {
     })
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
-        alert('¡Gracias!');
-        window.location.assign('../index.html');
+        alert('¡Gracias! Bienvenido a TERMINAL 1');
+        // window.location.assign('../index.html');
       })
       .catch(function(error) {
         console.error('Error adding document: ', error);
@@ -49,6 +53,7 @@ captureButton.addEventListener('click', function() {
   // Draw the video frame to the canvas.
   let foto = context.drawImage(player, 0, 0, snapshotCanvas.width,
     snapshotCanvas.height);
+  console.log(foto);
   // Stop all video streams.
   videoTracks.forEach(function(track) {
     track.stop();
@@ -59,3 +64,12 @@ navigator.mediaDevices.getUserMedia({
   video: true
 })
   .then(handleSuccess);
+
+let canvas = document.getElementById('snapshot');
+// console.log(canvas);
+// Converts canvas to an image
+function convertCanvasToImage(canvas) {
+  var image = new Image();
+  image.src = canvas.toDataURL('image/png');
+  // console.log(image);
+}

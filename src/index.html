@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Josefin+Slab|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <title>Registro</title>
 </head>
@@ -15,23 +15,23 @@
 <body>
   <section>
     <div class="container">
-      <div class="row">
         <div class="col l12 m12 s12">
-          <a href="views/signIn.html">Sign In</a>
-          <!-- <a id="sign-in-href" herf="../views/signIn.html">Sign in</a> -->
+          <a href="views/signIn.html" id="sign-in-href">Sign In</a>
         </div>
-      </div>
-    </div>
   </section>
 
   <main>
-    <div class="container center">
+    <div class=" center">
+      <div class="row"> 
         <div class="col l12 m12 s12">
-          <p class="bienvenida">Bienvenid@</p>
-          <p class="logo">Terminal 1</p>
+          <img id="terminal-uno"src="data:image/png;base64,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">
+         <div class="row"> 
           <button id="button-registro" type="button">Iniciar registro</button>
+        </div>
+        </div>
       </div>
   </main>
+</div>
 
   </div>
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>

@@ -1,101 +1,141 @@
-.bienvenida{
+.bienvenida {
     font-family: 'Quicksand', sans-serif;
-    font-size: 300%;
-}
-
-.logo{
-    font-size:300%;
-}
-
-
-#sign-in-href{
     font-size: 150%;
- text-align: right;
+    margin-top: 10%;
 }
 
-.visitor-label{
+#sign-in-href {
+    font-size: 150%;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    font-family: 'Poiret One', cursive;
+}
+
+#terminal-uno {
+    margin-top: 10%;
+    /* margin-top:0; */
+    width: 50%;
+}
+
+#button-registro {
+    margin-top: 9%;
+    padding: 2% 3%;
+    font-size: 200%;
+    background-color: white;
+    border: solid;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+}
+
+.visitor-label {
     font-family: 'Quicksand', sans-serif;
     font-size: 200%;
-    margin-top:10%;
+    margin-top: 10%;
     margin-bottom: 0%;
     font-weight: bold;
     text-align: center;
 }
-.admin-label{
+
+.admin-label {
     font-family: 'Quicksand', sans-serif;
     font-size: 200%;
-    margin-top:10%;
+    margin-top: 10%;
     /* margin-bottom: 0%; */
     font-weight: bold;
     text-align: center;
 }
-.registro-label{
+
+.registro-label {
     font-family: 'Quicksand', sans-serif;
     font-size: 200%;
-    margin-top:10%;
+    margin-top: 10%;
     /* margin-bottom: 0%; */
     font-weight: bold;
     text-align: center;
 }
-.visitor-label-english{
+
+.visitor-label-english {
     font-family: 'Quicksand', sans-serif;
     font-size: 150%;
     margin-top: 0%;
     text-align: center;
-
 }
 
-#fullname-span, #email-span, #company-span {
-    font-size: 100%; 
+#fullname-span,
+#email-span,
+#company-span {
+    font-size: 100%;
 }
 
-.formcontent{
-margin-left:15%;
+.formcontent {
+    margin-left: 15%;
 }
 
-form{
-    margin-top:10%;
+form {
+    margin-top: 10%;
 }
 
-
-video{
+video {
     width: 160%;
 }
 
 /* #capture{
     align-content: center;
 } */
-#send-form-btn{
-    margin-top:10%;
+
+#send-form-btn {
+    /* margin-top: 10%; */
+    margin-top: 9%;
+    padding: 2% 3%;
+    font-size: 150%;
+    background-color: white;
+    border: solid;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    margin-left: 25%;
 }
 
 #instruccion-foto{
     font-family: 'Quicksand', sans-serif;
-    font-size: 100%;
+    font-size: 150%;
     font-weight: bold;
-    margin-top:10%;
+    margin-top: 10%;
+    font-weight: bolder;
 }
 
-#img{
-    width: 50px;
-    height: 50px;
-}
-#img2{
-    width: 50px;
-    height: 50px;
-}
-#img3{
+#img {
     width: 50px;
     height: 50px;
 }
 
-th{
+#img2 {
+    width: 50px;
+    height: 50px;
+}
+
+#img3 {
+    width: 50px;
+    height: 50px;
+}
+
+th {
     text-align: center;
 }
 
-.td-name, .td-company {
+.td-name,
+.td-company {
     text-align: center;
 }
-.td-email{
+
+.td-email {
     text-align: left;
+}
+
+* {
+    margin: 1%;
+}
+
+#camara-icon{
+    margin-left:40%;
 }
