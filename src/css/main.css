@@ -5,7 +5,7 @@
 }
 
 #sign-in-href {
-    font-size: 150%;
+    font-size: 120%;
     font-weight: bold;
     color: black;
     text-align: right;
@@ -26,6 +26,16 @@
     border: solid;
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
+}
+#sign-out-href{
+    margin-top: 10%;
+    padding: 2% 3%;
+    font-size: 150%;
+    background-color: white;
+    border: solid black;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    color: black;
 }
 
 .visitor-label {
@@ -49,8 +59,7 @@
 .registro-label {
     font-family: 'Quicksand', sans-serif;
     font-size: 200%;
-    margin-top: 10%;
-    /* margin-bottom: 0%; */
+    margin-bottom: 5%;
     font-weight: bold;
     text-align: center;
 }
@@ -66,6 +75,17 @@
 #email-span,
 #company-span {
     font-size: 100%;
+}
+
+#log-in-btn-admin{
+    margin-top: 9%;
+    padding: 2% 3%;
+    font-size: 150%;
+    background-color: white;
+    border: solid;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    margin-left: 5%;
 }
 
 .formcontent {
@@ -138,4 +158,9 @@ th {
 
 #camara-icon{
     margin-left:40%;
+}
+
+
+.body-registro{
+    padding: 0%;
 }
