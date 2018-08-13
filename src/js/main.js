@@ -40,15 +40,6 @@ navigator.mediaDevices.getUserMedia({
   .then(handleSuccess);
 
 
-// console.log(canvas);
-// Converts canvas to an image
-// function convertCanvasToImage(canvas) {
-// var image = new Image();
-// image.src = canvas.toDataURL('image/png');
-// console.log(image);
-
-// }
-
 sendBtn.addEventListener('click', () => {
   let completeNameValue = document.getElementById('fullname').value;
   let emailValue = document.getElementById('email').value;
@@ -79,3 +70,11 @@ sendBtn.addEventListener('click', () => {
       });
   };
 });
+// console.log(canvas);
+// Converts canvas to an image
+// function convertCanvasToImage(canvas) {
+// var image = new Image();
+// image.src = canvas.toDataURL('image/png');
+// console.log(image);
+
+// }
