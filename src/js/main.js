@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $('select').formSelect();
+});
 let db = firebase.firestore(); // Variable que inicializa Firestore
 let storage = firebase.storage();
 let blobURL = '';
@@ -63,7 +66,7 @@ sendBtn.addEventListener('click', () => {
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
         alert('¡Gracias! Bienvenido a TERMINAL 1');
-        // window.location.assign('../index.html');
+        window.location.assign('../index.html');
       })
       .catch(function(error) {
         console.error('Error adding document: ', error);
