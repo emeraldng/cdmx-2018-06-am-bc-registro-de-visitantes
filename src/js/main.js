@@ -38,6 +38,17 @@ sendBtn.addEventListener('click', () => {
   // pintarRegistrados();
 });
 
+
+//Funcion para generar PDF para credencial del visitante
+
+// function genPDF () {
+//     let doc = new jsPDF();
+    
+//     doc.txt(20,20, 'Aquí van los datos del VISITANTE!');
+//     doc.addPage();
+//     doc.save('Test.pdf')
+// }
+
 // funcion para pintar los registros de los visitantes
 
 // db.collection('visitors').onSnapshot((querySnapshot) => {
@@ -87,3 +98,7 @@ navigator.mediaDevices.getUserMedia({
   video: true
 })
   .then(handleSuccess);
+
+var canvas = document.getElementById('canvas');
+//var dataURL = canvas.toDataURL();
+//console.log(dataURL);
