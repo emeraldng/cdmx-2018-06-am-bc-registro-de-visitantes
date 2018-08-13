@@ -22,14 +22,14 @@ db.collection('visitors').get().then(querySnapshot => {
                                   <td class="td-email">${email}</td>
                                   <td>
                                   <form id="contact-form" method="POST" action="https://formspree.io/${email}">
-                    <div class="form-group center-block">
-                        <label for="inputName"></label>
-                        <input type="text" class="input-field col s12" id="inputName" placeholder="Host Name" name="name">${companyName}
-                    </div>
+                                  <div class="form-group center-block">
+                                 <label for="inputName"></label>
+                                 <input type="text" class="input-field col s12" id="inputName" placeholder="Host Name" name="name">${companyName}
+                                  </div>
                     
-                    <div class="form-group center-block">
-                        <label for="inputMessage"></label>
-                        <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Hola ${companyName}, tu invitadx ${visitorName} ha llegado a recepción. Recibelo con una sonrisa.
+                                 <div class="form-group center-block">
+                                 <label for="inputMessage"></label>
+                            <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Hola ${companyName}, tu invitadx ${visitorName} ha llegado a recepción. Recibelo con una sonrisa.
                             Att: Terminal1 </textarea>
                     </div>
                    
@@ -41,6 +41,13 @@ db.collection('visitors').get().then(querySnapshot => {
                     <span></span>
                 </form>
                                   </td>
+                                  <td>
+                                  <button type="button" id="button">PDF Credencial
+            </button>
+                                  </td>
                                   </tr>`;
   });
 });
+
+
+//funcion
