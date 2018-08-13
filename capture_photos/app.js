@@ -1,27 +1,29 @@
-// console.log("HOLA!");
+var player = document.getElementById('player');
+var snapshotCanvas = document.getElementById('snapshot');
+var captureButton = document.getElementById('capture');
+
+var handleSuccess = function (stream) {
+    // Attach the video stream to the video element and autoplay.
+    player.srcObject = stream;
+};
+
+captureButton.addEventListener('click', function () {
+    var context = snapshot.getContext('2d');
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, snapshotCanvas.width,
+        snapshotCanvas.height);
+});
+
+navigator.mediaDevices.getUserMedia({
+        video: true
+    })
+    .then(handleSuccess);
 
 
-// (function(){
-//     var video = document.getElementById('video'),
-//     vendorUrl = window.URL || window.webkitURL;
+//to create a URL    
+var canvas = document.getElementById('snapshot');
+var dataURL = canvas.toDataURL("image/jpeg");
+console.log(dataURL);
 
-//     navigator.getMedia = (navigator.getUserMedia ||
-//                          navigator.webkitGetUserMedia ||
-//                          navigator.mozGetUserMedia ||
-//                          navigator.msGetUserMedia);
-                        
-//    navigator.getMedia ({
-//        video: true,
-//        audio: false
-//    }, function(stream){
-//        video.src = window.URL.createObjectURL(stream);
-//        video.play();
-//    }, function (error){
-//        console.log("error!");
-       
-//    });                     
-// }) ();
-
-
-
-//hcgsvdhjav<jdchv<ajhdvfjav<
+var unicode = atob(dataURL);
+console.log(unicode);

@@ -1,11 +1,9 @@
-$(document).ready(function() {
-  $('select').formSelect();
-});
 let db = firebase.firestore(); // Variable que inicializa Firestore
 let storage = firebase.storage();
 let blobURL = '';
 
 let sendBtn = document.getElementById('send-form-btn');
+
 
 // captura de canvas
 let player = document.getElementById('player');
@@ -48,11 +46,12 @@ sendBtn.addEventListener('click', () => {
   let emailValue = document.getElementById('email').value;
   let companyValue = document.getElementById('company').value;
   let dateTime = firebase.firestore.FieldValue.serverTimestamp();
+
   // var myJSON = JSON.stringify(obj);
 
   // console.log(dateTime);
 
-  if (companyValue === '' || emailValue === ' ' || completeNameValue === '') {
+  if (emailValue === ' ' || completeNameValue === '' || companyValue === '') {
     alert('Es necesario llenar todos los campos');
   } else {
     db.collection('visitors').add({
@@ -73,6 +72,30 @@ sendBtn.addEventListener('click', () => {
       });
   };
 });
+
+
+let select = document.getElementById('person-select');
+select.addEventListener('change', () => {
+  let selectPerson = select.options[select.selectedIndex].value;
+  console.log(selectPerson);
+  if (selectPerson === 'Diana Carrillo') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'dianacarrillo.psic@outlook.com'
+    });
+  } else if (selectPerson === 'Lex Hernández') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'coder.lexsh@gmail.com'
+    });
+  } else {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'ifglitterthen@gmail.com'
+    });
+  };
+});
+
 // console.log(canvas);
 // Converts canvas to an image
 // function convertCanvasToImage(canvas) {
