@@ -10,25 +10,23 @@ db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
     let companyName = doc.data().company;
     let email = doc.data().email;
     let photo = doc.data().foto;
+    let correoEmpleado = doc.data().correoempleado;
     tableBody.innerHTML += `<tr>
-                                  <td>      
+                                  <td = "td-class">      
                                  <img src="" id="canvas-image" alt="">
                                   </td>
-                                  <td class="td-name">${visitorName}</td>
-                                  <td class="td-fecha" >${dateTime}</td>
-                                  <td class ="td-visited-person">${visitedPerson}</td>
-                                  <td class="td-company">${companyName}</td>
-                                  <td class="td-email">${email}</td>
+                                  <td class="td-class">${visitorName}</td>
+                                  <td class="td-class" >${dateTime}</td>
+                                  <td class ="td-class">${visitedPerson}</td>
+                                  <td class="td-class">${companyName}</td>
+                                  <td class="td-class">${email}</td>
                                   <td>
-                                  <form id="contact-form" method="POST" action="https://formspree.io/${doc.data().correoempleado}">
-                                  <div class="form-group center-block">
-                                  <label for="inputName"></label>
-                                  <input type="text" class="input-field col s12" id="inputName" placeholder="Host Name" name="name">${companyName}
-                                  </div>
+                                  <form id="contact-form" method="POST" action="https://formspree.io/${correoEmpleado}">
+                              
                     
                                   <div class="form-group center-block">
                                   <label for="inputMessage"></label>
-                                  <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Estimad@ ${visitedPerson}, tu invitadx ${visitorName} ha llegado a recepción. Recíbelo con una sonrisa.
+                                  <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Estimado(a) ${visitedPerson}, tu invitado(a) ${visitorName} ha llegado a Terminal 1. Cualquier inconveniente comunícate a la ext. 120
                                   Atte: Terminal1 </textarea>
                                   </div>
                    
@@ -40,16 +38,6 @@ db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
                                   <span></span>
                                   </form>
                                   </td>
-                                  
-
                                   </tr>`;
   });
 });
-
-// db.collection('Empresa').get().then(querySnapshot => {
-//   querySnapshot.forEach((doc) => {
-//     let visitedPerson = doc.data().employee;
-//     tableContainer.innerHTML += `<th>Persona visitada</th>
-//     <td class ="td-visited-person">${visitedPerson}</td>`;
-//   });
-// });

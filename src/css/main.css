@@ -142,8 +142,7 @@ th {
     text-align: center;
 }
 
-.td-name,
-.td-company, .td-email, .td-fecha, .td-visited-person {
+.td-class{
     text-align: center;
 }
 
