@@ -143,12 +143,8 @@ th {
 }
 
 .td-name,
-.td-company {
+.td-company, .td-email, .td-fecha, .td-visited-person {
     text-align: center;
-}
-
-.td-email {
-    text-align: left;
 }
 
 * {

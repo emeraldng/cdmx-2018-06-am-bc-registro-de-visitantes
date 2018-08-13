@@ -3,8 +3,9 @@ let storage = firebase.storage();
 let blobURL = '';
 
 let sendBtn = document.getElementById('send-form-btn');
-
-
+let select = document.getElementById('person-select');
+let empleado;
+let correo;
 // captura de canvas
 let player = document.getElementById('player');
 let snapshotCanvas = document.getElementById('snapshot');
@@ -50,7 +51,6 @@ sendBtn.addEventListener('click', () => {
   // var myJSON = JSON.stringify(obj);
 
   // console.log(dateTime);
-
   if (emailValue === ' ' || completeNameValue === '' || companyValue === '') {
     alert('Es necesario llenar todos los campos');
   } else {
@@ -58,10 +58,11 @@ sendBtn.addEventListener('click', () => {
       visitor: completeNameValue,
       email: emailValue,
       company: companyValue,
-      foto: '',
-      // asunto: asuntoValue,
+      visitado: empleado,
+      correoempleado: correo,
       fecha: dateTime
     })
+   
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
         alert('¡Gracias! Bienvenido a TERMINAL 1');
@@ -73,26 +74,34 @@ sendBtn.addEventListener('click', () => {
   };
 });
 
-
-let select = document.getElementById('person-select');
 select.addEventListener('change', () => {
   let selectPerson = select.options[select.selectedIndex].value;
-  console.log(selectPerson);
+  empleado = selectPerson;
   if (selectPerson === 'Diana Carrillo') {
     db.collection('Empresa').add({
       employee: selectPerson,
       email: 'dianacarrillo.psic@outlook.com'
     });
+    correo = 'dianacarrillo.psic@outlook.com';
+    // console.log(correo);
   } else if (selectPerson === 'Lex Hernández') {
     db.collection('Empresa').add({
       employee: selectPerson,
       email: 'coder.lexsh@gmail.com'
     });
-  } else {
+    correo = 'coder.lexsh@gmail.com';
+  } else if (selectPerson === 'Empleado') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'empresaterminal1@gmail.com'
+    });
+    correo = 'empresaterminal1@gmail.com';
+  } else if (selectPerson === 'Diana Esmeralda') {
     db.collection('Empresa').add({
       employee: selectPerson,
       email: 'ifglitterthen@gmail.com'
     });
+    correo = 'ifglitterthen@gmail.com';
   };
 });
 
@@ -102,5 +111,3 @@ select.addEventListener('change', () => {
 // var image = new Image();
 // image.src = canvas.toDataURL('image/png');
 // console.log(image);
-
-// }
