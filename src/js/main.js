@@ -3,7 +3,9 @@ let storage = firebase.storage();
 let blobURL = '';
 
 let sendBtn = document.getElementById('send-form-btn');
-
+let select = document.getElementById('person-select');
+let empleado;
+let correo;
 // captura de canvas
 let player = document.getElementById('player');
 let snapshotCanvas = document.getElementById('snapshot');
@@ -45,36 +47,67 @@ sendBtn.addEventListener('click', () => {
   let emailValue = document.getElementById('email').value;
   let companyValue = document.getElementById('company').value;
   let dateTime = firebase.firestore.FieldValue.serverTimestamp();
+
   // var myJSON = JSON.stringify(obj);
 
   // console.log(dateTime);
-
-  if (companyValue === '' || emailValue === ' ' || completeNameValue === '') {
+  if (emailValue === ' ' || completeNameValue === '' || companyValue === '') {
     alert('Es necesario llenar todos los campos');
   } else {
     db.collection('visitors').add({
       visitor: completeNameValue,
       email: emailValue,
       company: companyValue,
-      foto: '',
-      // asunto: asuntoValue,
+      visitado: empleado,
+      correoempleado: correo,
       fecha: dateTime
     })
+   
       .then(function(docRef) {
         console.log('Document written with ID: ', docRef.id);
         alert('¡Gracias! Bienvenido a TERMINAL 1');
-        // window.location.assign('../index.html');
+        window.location.assign('../index.html');
       })
       .catch(function(error) {
         console.error('Error adding document: ', error);
       });
   };
 });
+
+select.addEventListener('change', () => {
+  let selectPerson = select.options[select.selectedIndex].value;
+  empleado = selectPerson;
+  if (selectPerson === 'Diana Carrillo') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'dianacarrillo.psic@outlook.com'
+    });
+    correo = 'dianacarrillo.psic@outlook.com';
+    // console.log(correo);
+  } else if (selectPerson === 'Lex Hernández') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'coder.lexsh@gmail.com'
+    });
+    correo = 'coder.lexsh@gmail.com';
+  } else if (selectPerson === 'Empleado') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'empresaterminal1@gmail.com'
+    });
+    correo = 'empresaterminal1@gmail.com';
+  } else if (selectPerson === 'Diana Esmeralda') {
+    db.collection('Empresa').add({
+      employee: selectPerson,
+      email: 'ifglitterthen@gmail.com'
+    });
+    correo = 'ifglitterthen@gmail.com';
+  };
+});
+
 // console.log(canvas);
 // Converts canvas to an image
 // function convertCanvasToImage(canvas) {
 // var image = new Image();
 // image.src = canvas.toDataURL('image/png');
 // console.log(image);
-
-// }

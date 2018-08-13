@@ -112,7 +112,7 @@ video {
     border: solid;
     font-family: 'Poiret One', cursive;
     font-weight: bolder;
-    margin-left: 25%;
+    /* margin-left: 35%; */
 }
 
 #instruccion-foto{
@@ -142,21 +142,12 @@ th {
     text-align: center;
 }
 
-.td-name,
-.td-company {
+.td-class{
     text-align: center;
-}
-
-.td-email {
-    text-align: left;
 }
 
 * {
     margin: 1%;
-}
-
-#camara-icon{
-    margin-left:40%;
 }
 
 

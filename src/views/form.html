@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand|Josefin+Slab|Poiret+One" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Josefin+Slab|Poiret+One" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -40,19 +40,37 @@
             <span id="email-span" class="helper-text">Correo / e-mail </span>
           </div>
         </div>
+        <div class="input-field col s12">
+
+        </div>
         <div class="row">
           <div class="input-field col s10 m10 l10">
-            <input id="company" type="text">
+            <select id = "person-select">
+              <option value="" disabled selected></option>
+              <option id ="empleado" value="Empleado">Empleado</option>
+              <option id ="diana-carrillo" value="Diana Carrillo">Diana Carrillo</option>
+              <option id ="lex-hernandez" value="Lex Hernández">Lex Hernández</option>
+              <option id ="diana-esmeralda" value="Diana Esmeralda">Diana Esmeralda</option>
+            </select>
             <span id="company-span" class="helper-text" data-error="wrong" data-success="right">¿A quién visita? / Who are you visiting? </span>
           </div>
         </div>
-
-        <!-- Modal Trigger -->
-        <div class="row ">
-          <p id="instruccion-foto">Haga click en la cámara para tomar su foto / Click the camara to take a picture of you</p>
-          <i  class="material-icons modal-trigger" id="camara-icon" href="#modal1"> camera_alt</i>
-        </div>
         <div class="row">
+          <div class="input-field col s10 m10 l10">
+            <input id="company" type="text">
+            <span id="company-span" class="helper-text" data-error="wrong" data-success="right">Compañía visitada / Visited company </span>
+          </div>
+      </div>
+
+      <!-- Modal Trigger -->
+      <div class="row ">
+        <div class="col s12 m12 l12 center-align">
+          <p id="instruccion-foto">Haga click en la cámara para tomar su foto / Click the camara to take a picture of you</p>
+          <i class="material-icons modal-trigger" id="camara-icon" href="#modal1"> camera_alt</i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l12 center-align">
           <button type="button" id="send-form-btn">Enviar formulario
           </button>
           <button type="button" id="button">PDF Credencial
@@ -95,22 +113,19 @@
             <a href="#!" id="capture" class="modal-close waves-effect waves-green btn-flat center-align">Capturar</a>
           </div>
         </div>
-        <canvas id="snapshot" width=320 height=240></canvas>
-        <!-- <img src="" id="canvas-image" alt=""> -->
+      </div>
+      <canvas id="snapshot" width=320 height=240></canvas>
+      <!-- <img src="" id="canvas-image" alt=""> -->
       </div>
     </form>
-    </div>
+  </div>
 
-
-
-
-
-    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="../js/initialize.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="../js/initialize.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/jquery.js"></script>
 
 </body>
 

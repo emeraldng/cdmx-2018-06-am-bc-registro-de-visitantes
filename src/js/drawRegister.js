@@ -2,44 +2,41 @@ let db = firebase.firestore(); // Variable que inicializa Firestore
 let tableBody = document.getElementById('table-body');
 
 // funcion para pintar los registros de los visitantes
-db.collection('visitors').get().then(querySnapshot => {
+db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
   querySnapshot.forEach((doc) => {
-    console.log(doc.data().fecha);
-
     let visitorName = doc.data().visitor;
-    // ${doc.data().date.slice(0,22)}
     let dateTime = doc.data().fecha;
+    let visitedPerson = doc.data().visitado;
     let companyName = doc.data().company;
     let email = doc.data().email;
     let photo = doc.data().foto;
+    let correoEmpleado = doc.data().correoempleado;
     tableBody.innerHTML += `<tr>
-                                  <td>
+                                  <td = "td-class">      
                                  <img src="" id="canvas-image" alt="">
                                   </td>
-                                  <td class="td-name">${visitorName}</td>
-                                  <td translate="yes" >${dateTime}</td>
-                                  <td class="td-company">${companyName}</td>
-                                  <td class="td-email">${email}</td>
+                                  <td class="td-class">${visitorName}</td>
+                                  <td class="td-class" >${dateTime}</td>
+                                  <td class ="td-class">${visitedPerson}</td>
+                                  <td class="td-class">${companyName}</td>
+                                  <td class="td-class">${email}</td>
                                   <td>
-                                  <form id="contact-form" method="POST" action="https://formspree.io/${email}">
-                    <div class="form-group center-block">
-                        <label for="inputName"></label>
-                        <input type="text" class="input-field col s12" id="inputName" placeholder="Host Name" name="name">${companyName}
-                    </div>
+                                  <form id="contact-form" method="POST" action="https://formspree.io/${correoEmpleado}">
+                              
                     
-                    <div class="form-group center-block">
-                        <label for="inputMessage"></label>
-                        <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Hola ${companyName}, tu invitadx ${visitorName} ha llegado a recepción. Recibelo con una sonrisa.
-                            Att: Terminal1 </textarea>
-                    </div>
+                                  <div class="form-group center-block">
+                                  <label for="inputMessage"></label>
+                                  <textarea id="inputMessage" class="input-field col s12" rows="10" placeholder="Notifiación" name="message">Estimado(a) ${visitedPerson}, tu invitado(a) ${visitorName} ha llegado a Terminal 1. Cualquier inconveniente comunícate a la ext. 120
+                                  Atte: Terminal1 </textarea>
+                                  </div>
                    
-                    <div class="text-center">
-                        <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
-                            Notificar
-                        </button>
-                    </div>
-                    <span></span>
-                </form>
+                                  <div class="text-center">
+                                  <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
+                                  Notificar
+                                  </button>
+                                  </div>
+                                  <span></span>
+                                  </form>
                                   </td>
                                   </tr>`;
   });
