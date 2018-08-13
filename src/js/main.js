@@ -9,6 +9,45 @@ let player = document.getElementById('player');
 let snapshotCanvas = document.getElementById('snapshot');
 let captureButton = document.getElementById('capture');
 let videoTracks;
+let canvas = document.getElementById('snapshot');
+
+const handleSuccess = function(stream) {
+  // Attach the video stream to the video element and autoplay.
+  player.srcObject = stream;
+  videoTracks = stream.getVideoTracks();
+};
+
+captureButton.addEventListener('click', () => {
+  let context = snapshot.getContext('2d');
+  console.log(context);
+  if (context) {
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, snapshotCanvas.width,
+      snapshotCanvas.height);
+    let datosCanvas = canvas.toDataURL('image/png');
+    let imageUrl = document.getElementById('canvas-image').src = datosCanvas;
+    (console.log(imageUrl));
+    // Stop all video streams.
+    videoTracks.forEach(track => {
+      track.stop();
+    });
+  }
+});
+
+navigator.mediaDevices.getUserMedia({
+  video: true
+})
+  .then(handleSuccess);
+
+
+// console.log(canvas);
+// Converts canvas to an image
+// function convertCanvasToImage(canvas) {
+// var image = new Image();
+// image.src = canvas.toDataURL('image/png');
+// console.log(image);
+
+// }
 
 sendBtn.addEventListener('click', () => {
   let completeNameValue = document.getElementById('fullname').value;
@@ -40,36 +79,3 @@ sendBtn.addEventListener('click', () => {
       });
   };
 });
-
-const handleSuccess = function(stream) {
-  // Attach the video stream to the video element and autoplay.
-  player.srcObject = stream;
-  videoTracks = stream.getVideoTracks();
-};
-
-captureButton.addEventListener('click', function() {
-  let context = snapshot.getContext('2d');
-  console.log(context);
-  // Draw the video frame to the canvas.
-  let foto = context.drawImage(player, 0, 0, snapshotCanvas.width,
-    snapshotCanvas.height);
-  console.log(foto);
-  // Stop all video streams.
-  videoTracks.forEach(function(track) {
-    track.stop();
-  });
-});
-
-navigator.mediaDevices.getUserMedia({
-  video: true
-})
-  .then(handleSuccess);
-
-let canvas = document.getElementById('snapshot');
-// console.log(canvas);
-// Converts canvas to an image
-function convertCanvasToImage(canvas) {
-  var image = new Image();
-  image.src = canvas.toDataURL('image/png');
-  // console.log(image);
-}
