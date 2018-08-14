@@ -13,7 +13,7 @@ db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
     let correoEmpleado = doc.data().correoempleado;
     tableBody.innerHTML += `<tr>
                                   <td = "td-class">      
-                                 <img src="" id="canvas-image" alt="">
+                                 <img src="${photo}" id="canvas-image" alt="">
                                   </td>
                                   <td class="td-class">${visitorName}</td>
                                   <td class="td-class" >${dateTime}</td>
