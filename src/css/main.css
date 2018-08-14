@@ -1,64 +1,90 @@
-.bienvenida{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 300%;
+body {
+    position: relative;
 }
-
-.logo{
-    font-size:300%;
+.two{
+    margin-top: 8%;
+    margin-bottom: 10%;
 }
-
-
-#sign-in-href{
-    font-size: 150%;
- text-align: right;
-}
-
-.visitor-label{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 200%;
-    margin-top:10%;
-    margin-bottom: 0%;
-    font-weight: bold;
-    text-align: center;
-}
-.visitor-label-english{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 150%;
-    margin-top: 0%;
-    text-align: center;
+.four{
+    margin-top: 8%;
+    justify-content:center;
 
 }
+#welcome-message{
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
 
-#fullname-span, #email-span, #company-span {
-    font-size: 100%; 
+}
+#button-registro{
+    width: 15em;
+    height: 6em;
+    font-size: 1em;
+    border-width: thick;
+    border-color: #2ED8C4;
+
+
+    
 }
 
-.formcontent{
-margin-left:15%;
+
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {} */
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .two{
+        margin-top: 15%;
+        margin-bottom: 3%;
+    }
+.four{
+    margin-top: 15%;
 }
 
-form{
-    margin-top:10%;
+    .five{
+        margin-top: 60%;
+        
+    
+ }
+
+
+ #terminal-uno{
+    width: 100%;
+    height: auto;
+    margin-top: 20%;
+ 
 }
 
-#form-admin{
- margin-left:10%;;
 }
 
-video{
-    width: 160%;
+/* // Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
+.camera-ico{
+    width: 15%;
+    height: auto;
 }
 
-/* #capture{
-    align-content: center;
-} */
-#send-form-btn{
-    margin-top:10%;
+.form-wrap{
+    margin-top: 8%;
 }
-
-#instruccion-foto{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 100%;
-    font-weight: bold;
-    margin-top:10%;
+.camera-ico{
+    margin-top: 9%;
+}
+.info-text{
+    margin-top: 10%;
+}
+.form-group{
+    font-family: 'Poppins', sans-serif;
+    color: #b0b0b0;
+}
+.arrow-ico{
+    width: 10%;
+    height: auto;
+    margin-bottom: 5%;
 }
