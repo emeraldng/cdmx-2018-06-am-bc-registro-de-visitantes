@@ -39,8 +39,7 @@ db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
                                   </form>
                                   </td>
                                   <td>
-                                  <button type="button" id="button">PDF Credencial
-            </button>
+                                  <button type="button" id="button" onclick="">PDF Credencial</button>
                                   </td>
                                   </tr>`;
   });
