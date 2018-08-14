@@ -1,7 +1,4 @@
 let db = firebase.firestore(); // Variable que inicializa Firestore
-let storage = firebase.storage();
-let blobURL = '';
-
 let sendBtn = document.getElementById('send-form-btn');
 let select = document.getElementById('person-select');
 let empleado;
@@ -12,7 +9,7 @@ let snapshotCanvas = document.getElementById('snapshot');
 let captureButton = document.getElementById('capture');
 let videoTracks;
 let canvas = document.getElementById('snapshot');
-
+let CanvasUrl;
 const handleSuccess = function(stream) {
   // Attach the video stream to the video element and autoplay.
   player.srcObject = stream;
@@ -26,9 +23,8 @@ captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
     context.drawImage(player, 0, 0, snapshotCanvas.width,
       snapshotCanvas.height);
-    let datosCanvas = canvas.toDataURL('image/png');
-    let imageUrl = document.getElementById('canvas-image').src = datosCanvas;
-    (console.log(imageUrl));
+    canvasUrl = canvas.toDataURL('image/png');
+    (console.log(canvasUrl));
     // Stop all video streams.
     videoTracks.forEach(track => {
       track.stop();
@@ -60,7 +56,8 @@ sendBtn.addEventListener('click', () => {
       company: companyValue,
       visitado: empleado,
       correoempleado: correo,
-      fecha: dateTime
+      fecha: dateTime,
+      foto: canvasUrl
     })
    
       .then(function(docRef) {
