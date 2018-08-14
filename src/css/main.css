@@ -74,7 +74,7 @@ body {
     margin-top: 8%;
 }
 .camera-ico{
-    margin-top: 15%;
+    margin-top: 9%;
 }
 .info-text{
     margin-top: 10%;
@@ -82,4 +82,9 @@ body {
 .form-group{
     font-family: 'Poppins', sans-serif;
     color: #b0b0b0;
+}
+.arrow-ico{
+    width: 10%;
+    height: auto;
+    margin-bottom: 5%;
 }
