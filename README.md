@@ -24,7 +24,7 @@ Terminal 1 es un cowork fundado en el año del 2014 por los hermanos **Alonso** 
 En la CDMX se encuentran dos sucursales, la primera en la calle de Tehuantepec No. 170 en la colonia Roma Sur,  el primero en ser fundado mientras que en la calle Sinaloa 195 en la colonia Roma Norte se encuentra el segundo.
 
 Ambos edificios albergan empresas de diversos sectores, varias compañías de renombre internacional hacen uso de las instalaciones, por ello, terminal 1 posee un alto trafico de personas en sus instalaciones, tanto nacionales como extranjeras.
-![Izquierda: Área de atención al visitante y comunidad T1, Derecha: libro florete de visitas terminal 1](https://image.ibb.co/mQECy9/diledit1.png)
+![Izquierda: Área de atención al visitante y comunidad T1, Derecha: libro florete de visitas terminal 1](https://i.imgur.com/OXVsb4I.jpg)
 
 > Izquierda: Área de atención al visitante y comunidad T1, Derecha: libro florete de visitas terminal 1
 # **Problema**
@@ -63,3 +63,8 @@ Con la finalidad de conocer el proceso en que otros coworkings enfrentan el reci
 [Videos grabados durante visita Mystery shopper](https://drive.google.com/drive/folders/1Yi4Th7YGqEzPEVOeLFyH-dDFqHgBegX_?usp=sharing)
 
 [Audio de entrevista con recepcionista de Terminal 1](https://soundcloud.com/user-590404918/entrevista-ux/s-hYlk2)
+
+# **Sketches**
+[Sketches baja fidelidad](https://drive.google.com/drive/folders/1QGMEm1qWPEQ97xsott-_jbQQrQkPXRru)
+[marvel clicleable/visitante](https://marvelapp.com/e7e0g9e)
+[marvel clicleable/administrador](https://marvelapp.com/33ig30d)
