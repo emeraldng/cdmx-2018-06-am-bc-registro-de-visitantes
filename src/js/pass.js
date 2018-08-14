@@ -1,4 +1,3 @@
-
 $('#button').click(function() {
   var doc = new jsPDF();
             
@@ -16,4 +15,3 @@ $('#button').click(function() {
   doc.text(23, 162, department);
   // doc.text(23, 202, title);
   doc.save('CredencialVisitante.pdf');
-});
