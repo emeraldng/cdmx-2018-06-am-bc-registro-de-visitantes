@@ -1,165 +1,85 @@
-.bienvenida {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 150%;
+body {
+    position: relative;
+}
+.two{
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+.four{
+    margin-top: 8%;
+    justify-content:center;
+
+}
+#welcome-message{
+    font-size: 3em;
+    font-family: 'Lato', sans-serif;
+
+}
+#button-registro{
+    width: 15em;
+    height: 6em;
+    font-size: 1em;
+    border-width: thick;
+    border-color: #2ED8C4;
+
+
+    
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {} */
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .two{
+        margin-top: 15%;
+        margin-bottom: 3%;
+    }
+.four{
+    margin-top: 15%;
+}
+
+    .five{
+        margin-top: 60%;
+        
+    
+ }
+
+
+ #terminal-uno{
+    width: 100%;
+    height: auto;
+    margin-top: 20%;
+ 
+}
+
+}
+
+/* // Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
+.camera-ico{
+    width: 15%;
+    height: auto;
+}
+
+.form-wrap{
+    margin-top: 8%;
+}
+.camera-ico{
+    margin-top: 15%;
+}
+.info-text{
     margin-top: 10%;
 }
-
-#sign-in-href {
-    font-size: 120%;
-    font-weight: bold;
-    color: black;
-    text-align: right;
-    font-family: 'Poiret One', cursive;
-}
-
-#terminal-uno {
-    margin-top: 10%;
-    width: 50%;
-}
-
-#button-registro {
-    margin-top: 9%;
-    padding: 2% 3%;
-    font-size: 200%;
-    background-color: white;
-    border: solid;
-    font-family: 'Poiret One', cursive;
-    font-weight: bolder;
-}
-#sign-out-href{
-    margin-top: 10%;
-    padding: 2% 3%;
-    font-size: 150%;
-    background-color: white;
-    border: solid black;
-    font-family: 'Poiret One', cursive;
-    font-weight: bolder;
-    color: black;
-}
-
-.visitor-label {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 200%;
-    margin-top: 10%;
-    margin-bottom: 0%;
-    font-weight: bold;
-    text-align: center;
-}
-
-.admin-label {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 200%;
-    margin-top: 10%;
-    /* margin-bottom: 0%; */
-    font-weight: bold;
-    text-align: center;
-}
-
-.registro-label {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 200%;
-    margin-bottom: 5%;
-    font-weight: bold;
-    text-align: center;
-}
-
-.visitor-label-english {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 150%;
-    margin-top: 0%;
-    text-align: center;
-}
-
-#fullname-span,
-#email-span,
-#company-span {
-    font-size: 100%;
-}
-
-#log-in-btn-admin{
-    margin-top: 9%;
-    padding: 2% 3%;
-    font-size: 150%;
-    background-color: white;
-    border: solid;
-    font-family: 'Poiret One', cursive;
-    font-weight: bolder;
-    margin-left: 5%;
-}
-
-.formcontent {
-    margin-left: 15%;
-}
-
-form {
-    margin-top: 10%;
-}
-
-video {
-    width: 160%;
-}
-
-/* #capture{
-    align-content: center;
-} */
-
-#send-form-btn {
-    /* margin-top: 10%; */
-    margin-top: 9%;
-    padding: 2% 3%;
-    font-size: 150%;
-    background-color: white;
-    border: solid;
-    font-family: 'Poiret One', cursive;
-    font-weight: bolder;
-    margin-left: 25%;
-}
-
-#instruccion-foto{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 150%;
-    font-weight: bold;
-    margin-top: 10%;
-    font-weight: bolder;
-}
-
-#img {
-    width: 50px;
-    height: 50px;
-}
-
-#img2 {
-    width: 50px;
-    height: 50px;
-}
-
-#img3 {
-    width: 50px;
-    height: 50px;
-}
-
-th {
-    text-align: center;
-}
-
-.td-name,
-.td-company {
-    text-align: center;
-}
-
-.td-email {
-    text-align: left;
-}
-
-* {
-    margin: 1%;
-}
-
-#camara-icon{
-    margin-left:40%;
-}
-
-
-.body-registro{
-    padding: 0%;
+.form-group{
+    font-family: 'Poppins', sans-serif;
+    color: #b0b0b0;
 }
