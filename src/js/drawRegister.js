@@ -38,6 +38,10 @@ db.collection('visitors').orderBy('fecha', 'desc').get().then(querySnapshot => {
                                   <span></span>
                                   </form>
                                   </td>
+                                  <td>
+                                  <button type="button" id="button">PDF Credencial
+            </button>
+                                  </td>
                                   </tr>`;
   });
 });
